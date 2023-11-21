@@ -1,18 +1,22 @@
 // Show menu
-const navMenu = document.getEtementById('nav—menu')
-const navToggle = document.getEIementById('nav—toggle')
-const navClose = document.getElementByIdC('nav—close')
+const navMenu = document.querySelector('.nav-menu')
+const navToggle = document.querySelector('#nav-toggle')
+const navClose = document.querySelector('#nav-close')
 
 // Menu show----Validate if constant exists
 if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show—menu')
+    navToggle.addEventListener('click', _ => {
+        if (!navMenu.classList.contains(' ')) {
+            navMenu.style.top = 0
+        }
     })
 }
 
 // Menu hidden----Validate if constant exists
 if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show—menu')
+    navClose.addEventListener('click', _ => {
+        if (!navMenu.classList.contains(' ')) {
+            navMenu.style.top = '-100%'
+        }
     })
 }
