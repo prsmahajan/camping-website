@@ -17,6 +17,8 @@ if (navClose) {
     navClose.addEventListener('click', _ => {
         if (!navMenu.classList.contains(' ')) {
             navMenu.style.top = '-100%'
+        } else {
+            return true
         }
     })
 }
